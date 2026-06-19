@@ -4,7 +4,7 @@ A React + TypeScript web app that calculates a whole-body health score from life
 
 **Repository:** https://github.com/rahulnara/health-score-360
 
-**Local dev URL:** https://health-score-360.vercel.app/
+**URL:** https://health-score-360.vercel.app/
 
 ## Features
 
