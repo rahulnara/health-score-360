@@ -1,0 +1,429 @@
+:root {
+  color: #18211f;
+  background: #f3f6f2;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 28px;
+  background:
+    linear-gradient(120deg, rgba(38, 119, 107, 0.1), transparent 34%),
+    linear-gradient(180deg, #fbfcf8 0%, #eef5f1 46%, #f6efe8 100%);
+}
+
+.topbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(1480px, 100%);
+  margin: 0 auto 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #25776b;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 880px;
+  margin-bottom: 0;
+  font-size: clamp(2rem, 2vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.auth-actions,
+.panel-title,
+.simulation-results,
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.auth-actions button,
+.panel-title button,
+.primary-action {
+  min-height: 42px;
+  border: 1px solid rgba(24, 33, 31, 0.14);
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #18211f;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.auth-actions button:first-child,
+.primary-action {
+  color: #fff;
+  border-color: #25776b;
+  background: #25776b;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 18px;
+  width: min(1480px, 100%);
+  margin: 0 auto;
+  align-items: start;
+}
+
+.input-panel,
+.panel,
+.score-hero,
+.metric-card {
+  border: 1px solid rgba(24, 33, 31, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 50px rgba(43, 70, 61, 0.11);
+}
+
+.input-panel {
+  position: sticky;
+  top: 20px;
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+}
+
+.panel-title {
+  justify-content: space-between;
+}
+
+.panel-title h2 {
+  margin: 0;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  color: #4b5954;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.field.wide {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #d5dfda;
+  border-radius: 8px;
+  padding: 0 11px;
+  color: #18211f;
+  background: #fbfdfb;
+}
+
+.field input[type="range"] {
+  padding: 0;
+  accent-color: #25776b;
+}
+
+.input-unit {
+  position: relative;
+}
+
+.input-unit small {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  color: #6a7872;
+  font-size: 0.72rem;
+  transform: translateY(-50%);
+}
+
+.input-unit input {
+  padding-right: 56px;
+}
+
+.dashboard {
+  display: grid;
+  gap: 18px;
+}
+
+.score-hero {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 22px;
+}
+
+.score-hero strong {
+  display: block;
+  color: #194d46;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.score-hero span {
+  color: #5f6d67;
+  font-weight: 800;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.metric-card,
+.panel {
+  padding: 16px;
+}
+
+.metric-card span,
+.nutrition-grid span,
+.simulation-results span {
+  color: #52615b;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.metric-card strong,
+.nutrition-grid strong,
+.simulation-results strong {
+  display: block;
+  margin-top: 6px;
+  color: #18211f;
+  font-size: 1.35rem;
+}
+
+.meter {
+  overflow: hidden;
+  width: 100%;
+  height: 8px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: #e6ede9;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #25776b;
+}
+
+.meter.amber span {
+  background: #c7822a;
+}
+
+.meter.red span {
+  background: #bf4d45;
+}
+
+.two-column,
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.charts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.helper {
+  margin-bottom: 14px;
+  color: #66746f;
+  line-height: 1.55;
+}
+
+.risk-list,
+.recommendations,
+.coach-list {
+  display: grid;
+  gap: 12px;
+}
+
+.risk-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.risk-row .meter {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.recommendations {
+  margin: 0;
+  padding-left: 18px;
+  color: #34413d;
+  line-height: 1.55;
+}
+
+.nutrition-grid,
+.simulation-results {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.nutrition-grid span,
+.simulation-results span {
+  min-height: 74px;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f1f6f3;
+}
+
+textarea {
+  min-height: 88px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.coach-list p {
+  margin: 0;
+  border-left: 3px solid #25776b;
+  padding: 10px 12px;
+  color: #35433e;
+  line-height: 1.5;
+  background: #f2f7f4;
+}
+
+.simulator {
+  display: grid;
+  gap: 14px;
+}
+
+.slider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.slider-grid label {
+  display: grid;
+  gap: 8px;
+  color: #4b5954;
+  font-weight: 900;
+}
+
+.slider-grid input {
+  accent-color: #25776b;
+}
+
+.chart-panel {
+  min-height: 280px;
+}
+
+.badges {
+  padding-bottom: 12px;
+}
+
+.badges span {
+  border: 1px solid #d4ded9;
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: #5f6d67;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.badges span.earned {
+  color: #0e423a;
+  border-color: #8ec7bb;
+  background: #dff3ee;
+}
+
+@media (max-width: 1180px) {
+  .workspace,
+  .score-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .input-panel {
+    position: static;
+  }
+
+  .metric-grid,
+  .charts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .field-grid,
+  .metric-grid,
+  .two-column,
+  .charts,
+  .nutrition-grid,
+  .slider-grid,
+  .simulation-results {
+    grid-template-columns: 1fr;
+  }
+
+  .score-hero strong {
+    font-size: 3.5rem;
+  }
+}
