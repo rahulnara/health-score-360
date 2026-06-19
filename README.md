@@ -2,9 +2,9 @@
 
 A React + TypeScript web app that calculates a whole-body health score from lifestyle and biometric inputs. It includes disease risk indicators, nutrition targets, trend tracking, a future health simulator, and an AI-style health coach.
 
-**Repository:** [https://github.com/rahulnara/health-score-360](https://github.com/rahulnara/health-score-360)
+**Repository:** https://github.com/rahulnara/health-score-360
 
-**Local dev URL:** [http://127.0.0.1:5173](http://127.0.0.1:5173)
+**Local dev URL:** https://health-score-360.vercel.app/
 
 ## Features
 
@@ -17,7 +17,7 @@ A React + TypeScript web app that calculates a whole-body health score from life
 - Future health simulator (sleep, steps, weight sliders)
 - Trend charts for score, weight/BMI, and calorie burn
 - Gamification badges
-- Profile persistence via `localStorage`
+- Profile persistence via `localStorage.`
 
 ## Tech Stack
 
